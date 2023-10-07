@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expenses</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+<body>
+    <div id="page-heading">
+        <h1 class="page-heading">Add Expense</h1>
+    </div>
+    <div class="add-expense">
+        <form onsubmit="addExpense(event)" class="main-form" id="main-form">
+            <label for="amount" class="label">Amount</label><br>
+            <input type="number" class="amount" id="amount" name="amount" required><br>
+            <label for="description" class="label">Description</label><br>
+            <input type="text" class="description" id="description" name="description" required><br>
+            <label for="category" class="label">Category</label><br>
+            <select name="category" id="category" class="category" required>
+                <option value="">Select Option</option>
+                <option value="Food">Food</option>
+                <option value="Entertainment">Entertainment</option>
+                <option value="Rent">Rent</option>
+                <option value="Medical">Medical</option>
+                <option value="Travel">Travel</option>
+                <option value="Other">Other</option>
+            </select><br>
+            <button type="submit" class="submit">Add Expense</button>
+            <p id="msg"></p>
+        </form>
+    </div>
+    <div class="expense-list">
+        <ul class="list" id="list">
+
+        </ul>
+    </div>
+    <div class="buy-premium-div" id="buy-premium-div">
+        <button class="buy-premium-btn" id="buy-premium-btn">Buy Premium</button>
+    </div>
+    <div class="LB-div" id="LB-div" >
+        <ol class="list" id="LB-list" hidden="hidden">
+            
+        </ol>
+    </div>
+    <div class="report-div" id="report-div" hidden="hidden">
+        <h3>Your Previous Expense Reports</h3>
+        <ul class="list" id="past-reports">
+
+        </ul>
+    </div>
+</body>
+<script src="../expense.js"></script>
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+</html>

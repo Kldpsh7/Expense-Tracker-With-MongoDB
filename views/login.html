@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Expense Tracker</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+<body>
+    <h1 class="main-heading">Log-In</h1>
+    <form onsubmit="login(event)" class="login-form" id="login-form">
+        <label for="username" class="label">Username</label><br>
+        <input type="email" class="login-username" id="username" name="Email" required><br>
+        <label for="login-password" class="label">password</label><br>
+        <input type="password" class="login-password" id="login-password" name="Password" required><br>
+        <button class="login-btn" type="submit">Login</button><br>
+        <p>Forgot your password? reset by clicking <a class="link" href="/password/resetPassword">Here</a></p>
+        <p class="alert" id="alert"></p>
+        <p>New User? <a href="/user/signup" class="link">SignUp</a></p>
+    </form>
+    <script src="../login.js"></script>
+</body>
+</html>
