@@ -39,10 +39,10 @@ app.use('/password',passwordRoutes);
 app.use('/',indexRoutes);
 app.use(errorController.error);
 
-(async ()=>{
-    let url = await ngrok.connect({addr:3000,authtoken:process.env.NGROKAUTHTOKEN});
-    console.log(url)
-})()
+// (async ()=>{
+//     let url = await ngrok.connect({addr:3000,authtoken:process.env.NGROKAUTHTOKEN});
+//     console.log(url)
+// })()
 
 mongoose.connect(`mongodb+srv://kldpsh7:${process.env.MONGOPASS}@shop.iqmcj0i.mongodb.net/Expenses?retryWrites=true&w=majority`)
 .then(()=>{
